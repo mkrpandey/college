@@ -17,7 +17,7 @@
 body{
   line-height:1.6;
   scroll-behavior:smooth;
-  padding-top:80px; /* FIXED HEADER GAP */
+  padding-top:80px;
 }
 
 /* ===== HEADER ===== */
@@ -43,11 +43,80 @@ nav a{
   margin-left:15px;
   text-decoration:none;
   font-weight:bold;
-  transition:0.3s;
 }
 
 nav a:hover{
   color:#ffd700;
+}
+
+/* ===== HERO HOME ===== */
+#home{
+  background-image:url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1");
+  background-size:cover;
+  background-position:center;
+  min-height:100vh;
+  position:relative;
+}
+
+.home-overlay{
+  background:rgba(11,60,93,0.75);
+  min-height:100vh;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+}
+
+#home h2{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+#home p{
+  font-size:18px;
+  margin-bottom:25px;
+}
+
+/* ===== BUTTONS ===== */
+.btn-box{
+  margin-bottom:40px;
+}
+
+.btn{
+  padding:12px 25px;
+  margin:0 8px;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:4px;
+}
+
+.btn.primary{
+  background:#ffd700;
+  color:#0b3c5d;
+}
+
+.btn.secondary{
+  border:2px solid white;
+  color:white;
+}
+
+/* ===== HOME CARDS ===== */
+.home-cards{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  background:white;
+  color:#0b3c5d;
+  padding:20px;
+  width:260px;
+  border-radius:8px;
 }
 
 /* ===== SECTIONS ===== */
@@ -59,22 +128,6 @@ section{
 h2{
   margin-bottom:15px;
   color:#0b3c5d;
-}
-
-/* ===== HOME ===== */
-#home{
-  background:linear-gradient(to right,#0b3c5d,#328cc1);
-  color:white;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
-
-#home h2{
-  font-size:40px;
-  color:white;
 }
 
 /* ===== ABOUT ===== */
@@ -165,7 +218,6 @@ footer{
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
   <h1>Airflow Institute</h1>
   <nav>
@@ -179,8 +231,30 @@ footer{
 
 <!-- ===== HOME ===== -->
 <section id="home">
-  <h2>Welcome to Airflow Institute</h2>
-  <p>Best institute for technical & professional courses</p>
+  <div class="home-overlay">
+    <h2>Welcome to Airflow Institute</h2>
+    <p>Best institute for technical & professional courses</p>
+
+    <div class="btn-box">
+      <a href="#admission" class="btn primary">Apply Now</a>
+      <a href="#courses" class="btn secondary">View Courses</a>
+    </div>
+
+    <div class="home-cards">
+      <div class="card">
+        <h3>Expert Faculty</h3>
+        <p>Industry experienced trainers</p>
+      </div>
+      <div class="card">
+        <h3>Modern Labs</h3>
+        <p>Practical based learning</p>
+      </div>
+      <div class="card">
+        <h3>Placement Support</h3>
+        <p>Career guidance & support</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ===== ABOUT ===== -->
@@ -229,7 +303,6 @@ footer{
   </form>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <p>© 2026 Airflow Institute | All Rights Reserved</p>
 </footer>
